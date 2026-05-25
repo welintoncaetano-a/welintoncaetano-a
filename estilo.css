@@ -1,1 +1,17 @@
+const textElement = document.getElementById("typing-text");
+const phrase = "Conectando você às tecnologias de 2050 e além...";
+let index = 0;
+
+function typeText() {
+    if (index < phrase.length) {
+        textElement.innerHTML += phrase.charAt(index);
+        index++;
+        setTimeout(typeText, 70);
+    }
+}
+
+// Inicia a digitação assim que a página carregar
+window.onload = () => {
+    typeText();
+};
 
